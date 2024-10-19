@@ -3,7 +3,7 @@
 
 {% block modal_cart %}
 {% include "includes/cart_button.html" %}
-{% endblock modal_cart %}
+{% endblock  %}
 
 {% block content %}
 <div class="row">
@@ -21,7 +21,7 @@
                                 name="first_name"
                                 placeholder="Введите ваше имя" required>
                                 {% if form.first_name.errors %}
-                                <div class="alert alert-danger alert-dismissible fade show">{{ form.first_name.errors }}</div>
+                                <div class="alert alert-danger alert-dismissible fade show">{{form.first_name.errors}}</div>
                                 {% endif %}
                         </div>
                         <div class="col-md-6 mb-3">
@@ -31,7 +31,7 @@
                                 name="last_name"
                                 placeholder="Введите вашу фамилию" required>
                                 {% if form.last_name.errors %}
-                                <div class="alert alert-danger alert-dismissible fade show">{{ form.last_name.errors }}</div>
+                                <div class="alert alert-danger alert-dismissible fade show">{{form.last_name.errors}}</div>
                                 {% endif %}
                         </div>
                         <div class="col-md-6 mb-3">
@@ -41,7 +41,7 @@
                                 name="username"
                                 placeholder="Введите ваше имя пользователя" required>
                                 {% if form.username.errors %}
-                                <div class="alert alert-danger alert-dismissible fade show">{{ form.username.errors }}</div>
+                                <div class="alert alert-danger alert-dismissible fade show">{{form.username.errors}}</div>
                                 {% endif %}
                         </div>
                         <div class="col-md-6 mb-3">
@@ -51,9 +51,9 @@
                                 name="email"
                                 placeholder="Введите ваш email" required>
                                 {% if form.email.errors %}
-                                <div class="alert alert-danger alert-dismissible fade show">{{ form.email.errors }}</div>
+                                <div class="alert alert-danger alert-dismissible fade show">{{form.email.errors}}</div>
                                 {% endif %}
-                            </div>
+                        </div>
                         <div class="col-md-6 mb-3">
                             <label for="id_password1" class="form-label">Пароль*</label>
                             <input type="password" class="form-control" id="id_password1"
@@ -82,4 +82,4 @@
         </div>
     </div>
 </div>
-{% endblock content %}
+{% endblock  %}

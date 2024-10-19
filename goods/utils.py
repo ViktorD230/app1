@@ -10,12 +10,11 @@ from goods.models import Products
 
 
 def q_search(query):
-
     if query.isdigit() and len(query) <= 5:
         return Products.objects.filter(id=int(query))
 
     vector = SearchVector("name", "description")
-    search_query = SearchQuery(query)
+    query = SearchQuery(query)
 
     result = (
         Products.objects.annotate(rank=SearchRank(vector, query))
@@ -40,9 +39,6 @@ def q_search(query):
         )
     )
     return result
-
-
-
     # keywords = [word for word in query.split() if len(word) > 2]
 
     # q_objects = Q()
